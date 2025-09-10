@@ -7,6 +7,7 @@ import dotenv from "dotenv";
 import eventRoutes from "./routes/createevent.routes.js";
 import sessionRoutes from "./routes/addsession.routes.js";
 import participantRoutes from "./routes/addparticipant.routes.js";
+import taskRoutes from "./routes/addtask.routes.js";
 
 
 dotenv.config();
@@ -21,6 +22,7 @@ app.use(express.json());
 app.use("/api", eventRoutes);
 app.use("/api", sessionRoutes);
 app.use("/api", participantRoutes);
+app.use("/api", taskRoutes);
 
 // DB connection
 mongoose
